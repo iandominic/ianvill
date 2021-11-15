@@ -1,0 +1,281 @@
+/* ./your-css-folder/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card {
+    @apply bg-white rounded overflow-hidden shadow-md relative;
+}
+
+.badge {
+    @apply bg-secondary-100 text-secondary-200 text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2; 
+}
+
+.button {
+    @apply rounded-full cursor-pointer py-2 px-3 uppercase text-xs font-bold tracking-wider ;
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fade-in2 {
+    animation: fadeIn2 1s;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fade-in3 {
+    animation: fadeIn3 1s;
+    animation-delay: 400ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fade-in4 {
+    animation: fadeIn4 1s;
+    animation-delay: 600ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fade-in5 {
+    animation: fadeIn4 1s;
+    animation-delay: 800ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.reveal {
+    animation: reveal-h1 300ms ease-out;
+    animation-delay: 100ms;
+}
+
+.reveal2 {
+    animation: reveal-h1 300ms ease-out;
+    animation-delay: 300ms;
+}
+
+.reveal3 {
+    animation: reveal-h1 300ms ease-out;
+    animation-delay: 500ms;
+}
+
+.reveal4 {
+    animation: reveal-h1 300ms ease-out;
+    animation-delay: 700ms;
+}
+
+.reveal5 {
+    animation: reveal-h1 300ms ease-out;
+    animation-delay: 900ms;
+}
+
+
+@keyframes reveal-h1 {
+    0% {
+        transform: translateY(20%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+   }
+   to {
+       opacity: 1;
+   }
+}
+
+@keyframes fadeIn2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+ }
+
+ @keyframes fadeIn3 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+ }
+
+ @keyframes fadeIn4 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+ }
+
+.a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.a:hover {
+    color: #3b82f6;
+}
+
+.a::after {
+    margin-top: -1px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: 0;
+    background: #3b82f6;;
+}
+
+.a::after {
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
+}
+
+.a:hover::after {
+    transform: scale(1, 1);
+}
+
+.btn-background-slide {
+    background-color: var(--background-color);
+    color: rgb(97, 97, 97);
+    padding: .5em 1em;
+    border: 2px solid #3b82f6;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 18px 80px;
+    margin-top: 8px;
+    border-radius: 2px;
+    margin-top: 30px;
+    
+  
+    --background-color: #fff;
+    --accent-color: #3b82f6;
+}
+
+.btn-background-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(.1);
+    transform-origin: left;
+}
+
+.btn-background-slide:hover::before,
+.btn-background-slide:focus::before {
+    transform: scaleX(1);
+}
+
+.btn-background-slide {
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+}
+
+.btn-background-slide:hover,
+.btn-background-slide:focus {
+    color: white;
+}
+
+.btn-background-slide2 {
+    background-color: var(--background-color);
+    color: rgb(202, 202, 202);
+    padding: .5em 1em;
+    border: 2px solid #3b82f6;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 18px 80px;
+    margin-top: 8px;
+    border-radius: 2px;
+    margin-top: 30px;
+    
+  
+    --background-color: rgba(17, 24, 39,);
+    --accent-color: #3b82f6;
+}
+
+.btn-background-slide2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(.1);
+    transform-origin: left;
+}
+
+.btn-background-slide2:hover::before,
+.btn-background-slide2:focus::before {
+    transform: scaleX(1);
+}
+
+.btn-background-slide {
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+}
+
+.btn-background-slide2:hover,
+.btn-background-slide2:focus {
+    color: white;
+}
+
+.bg-home {
+    background: url(/public/img/bg_home.jpg) no-repeat;
+
+}
+
+.image {
+    src: url("/public/img/fb-logo.png");
+}
+
+.dark-mode {
+    background-color: rgb(11, 8, 19);
+    color: white;
+}
+
+.icon-change {
+    src: url(/public/img/logo-change.png);
+}
+
+.content-transition {
+    transition: background-color .25s;
+}
